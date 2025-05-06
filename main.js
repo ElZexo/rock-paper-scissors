@@ -14,4 +14,17 @@ function getComputerChoice() {
     }
 }
 
+function getHumanChoice() {
+    let userMove = prompt("Choose your move!").toLowerCase()
+    if (userMove == "rock" || userMove == "paper" || userMove == "scissors") {
+        return userMove
+    }
+    else {
+        console.log("Invalid move, please choose again.")
+        getHumanChoice()
+    }
+}
+
+getHumanChoice()
+
 console.log(getComputerChoice())
