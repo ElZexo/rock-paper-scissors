@@ -39,23 +39,31 @@ function playRound (humanChoice, computerChoice) {
     console.log(humanChoice)
     console.log(computerChoice)
     if(humanChoice == "rock" && computerChoice == "scissors"){
-        console.log("You win! Rock beats Scissors.")
+        console.log("You win! Rock beats Scissors.");
+        humanScore++;
     }
     else if(humanChoice == "paper" && computerChoice == "rock") {
-        console.log("You win! Paper beats Rock.")
+        console.log("You win! Paper beats Rock.");
+        humanScore++;
     }
     else if(humanChoice == "scissors" && computerChoice == "paper") {
-        console.log("You win! Scissors beats Paper.")
+        console.log("You win! Scissors beats Paper.");
+        humanScore++;
     }
     else if(humanChoice == "rock" && computerChoice == "paper") {
-        console.log("You lose! Paper beats Rock.")
+        console.log("You lose! Paper beats Rock.");
+        computerScore++;
     }
     else if(humanChoice == "paper" && computerChoice == "scissors") {
-        console.log("You lose! Scissors beats Paper.")
+        console.log("You lose! Scissors beats Paper.");
+        computerScore++;
     }
     else if(humanChoice == "scissors" && computerChoice == "rock") {
-        console.log("You lose! Rock beats scissors.")
+        console.log("You lose! Rock beats scissors.");
+        computerScore++;
     }
     else console.log("That's a tie!")
+    console.log("Human score: " + humanScore);
+    console.log("Computer score: " + computerScore);
 }
 
